@@ -10,3 +10,5 @@ gpg --list-keys
 echo "Hola">doc_no_cifrado.txt
 #Se visualiza el mensaje 
 cat doc_no_cifrado.txt
+#Se usa el hash para cifrar el documento 
+gpg --output doc_cifrado.txt --encrypt --recipient  9E04700B2ACCDCDBC4B3794D981D97E977939DE5 doc_no_cifrado.txt
