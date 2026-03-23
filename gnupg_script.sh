@@ -14,3 +14,5 @@ cat doc_no_cifrado.txt
 gpg --output doc_cifrado.txt --encrypt --recipient  9E04700B2ACCDCDBC4B3794D981D97E977939DE5 doc_no_cifrado.txt
 #Cifra el documento 
 cat doc_cifrado.txt
+#Desencrypta el mensaje cifrado 
+gpg --decrypt doc_cifrado_1.txt
