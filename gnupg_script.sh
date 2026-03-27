@@ -22,3 +22,5 @@ gpg --output doc_no_cifrado_firmado.txt --clearsign doc_no_cifrado.txt
 gpg --sign doc_no_cifrado.txt
 # Crear una firma separada con --detach-sign
 gpg --detach-sign doc_no_cifrado.txt
+# Verificar la firma recibida con gpg --verify
+gpg --verify doc_no_cifrado_jose.txt.sig doc_no_cifrado_firmado_jose.txt
