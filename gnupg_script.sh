@@ -18,3 +18,5 @@ cat doc_cifrado.txt
 gpg --decrypt doc_cifrado_1.txt
 # Firmar en texto claro con --clearsign
 gpg --output doc_no_cifrado_firmado.txt --clearsign doc_no_cifrado.txt
+# Firmar en formato binario con --sign
+gpg --sign doc_no_cifrado.txt
