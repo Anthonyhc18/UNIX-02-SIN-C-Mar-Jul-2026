@@ -16,11 +16,15 @@ gpg --output doc_cifrado.txt --encrypt --recipient  9E04700B2ACCDCDBC4B3794D981D
 cat doc_cifrado.txt
 #Desencrypta el mensaje cifrado 
 gpg --decrypt doc_cifrado_1.txt
-# Firmar en texto claro con --clearsign
+# Sign in clear text with --clearsign
 gpg --output doc_no_cifrado_firmado.txt --clearsign doc_no_cifrado.txt
-# Firmar en formato binario con --sign
+# Sign in binary format with --sign
 gpg --sign doc_no_cifrado.txt
-# Crear una firma separada con --detach-sign
+# Create a detached signature with --detach-sign
 gpg --detach-sign doc_no_cifrado.txt
-# Verificar la firma recibida con gpg --verify
+# Verify the received signature with gpg --verify
 gpg --verify doc_no_cifrado_jose.txt.sig doc_no_cifrado_firmado_jose.txt
+# Level 4 (full trust) was assigned because Jose's identity is considered fully verified.
+# By signing his key with sign-key, its authenticity is certified, thus eliminating the warning message when verifying his signatures.
+# Set a trust level for your partner’s key. 
+gpg --edit-key isaacalmeida1353@gmail.com
