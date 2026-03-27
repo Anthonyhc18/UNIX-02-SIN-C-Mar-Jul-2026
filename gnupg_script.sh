@@ -28,3 +28,7 @@ gpg --verify doc_no_cifrado_jose.txt.sig doc_no_cifrado_firmado_jose.txt
 # By signing his key with sign-key, its authenticity is certified, thus eliminating the warning message when verifying his signatures.
 # Set a trust level for your partner’s key. 
 gpg --edit-key isaacalmeida1353@gmail.com
+#Define the level of trust for your partner’s key.
+Set a trust level for your partner’s key
+#Recheck the document signed by your partner to see the change in the warning message.
+gpg --verify doc_no_cifrado_jose.txt.gpg
