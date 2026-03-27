@@ -3,3 +3,9 @@
 cd /dev
 #list archives and directories 
 ls
+#change directory to proc directory
+cd /proc
+#list process on proc directory
+ls 
+#Show cpu informations
+cat cpuinfo
