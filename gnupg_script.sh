@@ -16,3 +16,5 @@ gpg --output doc_cifrado.txt --encrypt --recipient  9E04700B2ACCDCDBC4B3794D981D
 cat doc_cifrado.txt
 #Desencrypta el mensaje cifrado 
 gpg --decrypt doc_cifrado_1.txt
+# Firmar en texto claro con --clearsign
+gpg --output doc_no_cifrado_firmado.txt --clearsign doc_no_cifrado.txt
