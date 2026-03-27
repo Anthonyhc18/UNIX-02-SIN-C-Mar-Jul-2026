@@ -9,3 +9,6 @@ cd /proc
 ls 
 #Show cpu informations
 cat cpuinfo
+#PrintWorkingDirectory 
+#Permite ver el id 
+ls -i
