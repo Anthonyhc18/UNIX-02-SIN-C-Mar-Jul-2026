@@ -32,3 +32,7 @@ gpg --edit-key isaacalmeida1353@gmail.com
 Set a trust level for your partner’s key
 #Recheck the document signed by your partner to see the change in the warning message.
 gpg --verify doc_no_cifrado_jose.txt.gpg
+#Perform encryption and signing in one command.
+gpg --output doc_cifrado_firmado_aanthony.txt.gpg --encrypt --sign --recipient 1CD26B9D8619C4DD5228E0FDCCE13056CE70816E doc_no_cifrado.txt
+#Decrypt the file and verify its signature in one step.
+gpg --decrypt --output verificacion_jose.txt jose_firmado.txt.gpg
