@@ -20,3 +20,5 @@ gpg --decrypt doc_cifrado_1.txt
 gpg --output doc_no_cifrado_firmado.txt --clearsign doc_no_cifrado.txt
 # Firmar en formato binario con --sign
 gpg --sign doc_no_cifrado.txt
+# Crear una firma separada con --detach-sign
+gpg --detach-sign doc_no_cifrado.txt
