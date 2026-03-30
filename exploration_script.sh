@@ -4,3 +4,5 @@ sudo apt update
 sudo apt upgrate
 #installs the GNU Parted utility on Debian-based Linux distributions like Ubuntu, Linux Mint, and Kali Linux
 sudo apt install parted 
+#Lists disks and partitions, displays their file systems, and adds visual separators to organize information.
+sudo parted -l && echo -e "\n---\n" && lsblk -f && echo -e "?n--\n"
