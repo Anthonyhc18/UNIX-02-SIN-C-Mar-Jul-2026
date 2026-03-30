@@ -8,5 +8,7 @@ sudo apt install parted
 sudo parted -l && echo -e "\n---\n" && lsblk -f && echo -e "\n--\n"
 #To view the first disk partition
 parted -l
-#to viwe the second disk partition in order 
+#to view the second disk partition in order 
 lsblk -f
+# to view the BIOS system or the operating system
+[ -d /sys/firmware/efi ] && echo "UEFI" || echo "BIOS"
