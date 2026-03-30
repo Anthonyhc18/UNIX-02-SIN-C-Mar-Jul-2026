@@ -12,3 +12,5 @@ parted -l
 lsblk -f
 # to view the BIOS system or the operating system
 [ -d /sys/firmware/efi ] && echo "UEFI" || echo "BIOS"
+echo "mi archivo" > test.txt
+stat test.txt
