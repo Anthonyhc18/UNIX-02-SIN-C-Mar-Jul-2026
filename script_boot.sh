@@ -29,3 +29,17 @@ cd /home/codespace
 cd ~
 #Change directory to home directory using eviroment variable
 cd $Home
+#Where am I
+pwd 
+#Who am I
+whoami
+#when each file was modified
+ls -lt
+#It is used to view the command manual and how to use it
+manual (man)
+#ls command manual
+man ls 
+#dev lists the files, head -5 shows the first 5 devices
+ls /dev | head -5
+#`dev` lists the files, `tail -5` shows the last 5 devices
+ls /etc | tail -5
