@@ -20,4 +20,12 @@ Access: (0777/drwxrwxrwx)  Uid: ( 1000/codespace)   Gid: ( 1000/codespace)
 Access: 2026-04-08 21:08:23.672625654 +0000
 Modify: 2026-04-08 21:08:22.477625739 +0000
 Change: 2026-04-08 21:08:22.477625739 +0000
- Birth: 2026-04-08 21:08:22.477625739 +0000
+Birth: 2026-04-08 21:08:22.477625739 +0000
+#Change directory to home directory from any location operative system
+cd 
+#Change directory to home directory using absolute rute
+cd /home/codespace
+#Change directory to home directory using ~shortcut
+cd ~
+#Change directory to home directory using eviroment variable
+cd $Home
