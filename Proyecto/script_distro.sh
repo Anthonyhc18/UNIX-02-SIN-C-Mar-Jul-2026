@@ -4,3 +4,7 @@ cpio libelf-dev libssl-dev syslinux dosfstools qemu-system-x86
 #Download the source code
 git clone --depth 1 https://github.com/torvalds/linux.git
 cd linux
+#Configure the Kernel
+make menuconfig
+#It is used to verify if the kernel was configured time 5-10 min
+make -j$(nproc)
