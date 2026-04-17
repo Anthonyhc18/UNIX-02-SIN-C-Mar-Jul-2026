@@ -12,3 +12,7 @@ ls -lah
 mkdir -- -rf
 #Delete a folder named -rf, as it is used to delete empty directories.
 rmdir -- -rf
+#Quick help for the ls command directly in the terminal.
+ls --help
+#It is used to view a manual of the file list
+man ls
