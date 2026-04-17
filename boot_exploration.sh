@@ -25,3 +25,11 @@ man ls
 #rwx permissions for the user, read, write, execute
 #- file type, normal (does not allow execution)
 -rw-rw-rw
+#command to change permissions
+chmod +x script.sh
+# to grant permission only to users
+chmod u+x script.sh 
+#Remove reading from other
+chmod o-r secreto.txt
+#The owner reads/writes; no one else can do anything by removing all permissions.
+chmod u+rw,go-rwx privado 
