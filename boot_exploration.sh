@@ -43,3 +43,5 @@ sudo apt-get install acl
 sudo chown -R $(whoami) .
 #Removes ACL permissions from files and folders in the current directory and everything inside it.
 sudo setfacl -bnR .
+#Define the permissions that are REMOVED when you create files or folders.
+umask 027
