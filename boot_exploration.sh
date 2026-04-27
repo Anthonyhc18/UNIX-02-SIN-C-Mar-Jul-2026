@@ -33,3 +33,13 @@ chmod u+x script.sh
 chmod o-r secreto.txt
 #The owner reads/writes; no one else can do anything by removing all permissions.
 chmod u+rw,go-rwx privado 
+#When a problem is specific, AI won't help you because it sometimes doesn't provide what you specifically need. That's why it's better to use people's experience, because we're not the only ones with the problem.
+# We create a directory with a file 1
+touch archivo1
+mkdir directorio1
+#Install the ACL (Access Control List) package on Linux.
+sudo apt-get install acl
+#Change the owner of files and folders
+sudo chown -R $(whoami) .
+#Removes ACL permissions from files and folders in the current directory and everything inside it.
+sudo setfacl -bnR .
