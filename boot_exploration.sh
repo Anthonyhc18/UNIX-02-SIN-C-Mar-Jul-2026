@@ -45,3 +45,5 @@ sudo chown -R $(whoami) .
 sudo setfacl -bnR .
 #Define the permissions that are REMOVED when you create files or folders.
 umask 027
+#It makes it so that new files and folders can ONLY be used by their owner.
+umask 077
