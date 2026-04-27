@@ -47,3 +47,13 @@ sudo setfacl -bnR .
 umask 027
 #It makes it so that new files and folders can ONLY be used by their owner.
 umask 077
+#It displays the user you are currently logged in as.
+whoami
+#Write the text "Hello" inside a file called my_file.
+echo "Hola" >mi_archivo
+#Create a new user named luna with specific settings.
+useradd -m -s /usr/bin/zsh luna
+#Create a new user named luna, with their own home folder and using zsh as the shell, with administrator privileges.
+sudo useradd -m -s /usr/bin/zsh luna
+#Change the owner of the file my_file to the user luna.
+sudo chown luna mi_archivo
