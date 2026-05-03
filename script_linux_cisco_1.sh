@@ -24,3 +24,17 @@ aptitude -vvv moo
 #Level 4:Print the working directory
 #The pwd command prints the working directory.
 pwd
+#Level 5: Change of Directories
+#Files are used to store data such as text, graphics, and programs. Directories are a type of file used to store other files; they provide a hierarchical organizational structure.
+#It's used to change directories or move between folders on your system. It's how you navigate the file structure from the terminal.
+cd Documents 
+#It takes you directly to the system root (root directory).
+cd /
+#It is an instruction for the system to change your current location to a specific folder within the Linux hierarchy.
+cd /home/sysadmin
+#The command `cd School/Art` is an instruction to change directories to a specific path containing two levels. Executing it instructs the system to move to the `Art` folder, which is located inside the `School` folder.
+cd School/Art
+#It's one of the most essential commands in Linux and is used to move up one level in the directory structure. Simply put, it means "leaving the current folder and returning to the folder that contains it" (the parent folder).
+cd ..
+#It's the fastest shortcut in Linux to return to your home directory (also known as Home).
+cd ~
