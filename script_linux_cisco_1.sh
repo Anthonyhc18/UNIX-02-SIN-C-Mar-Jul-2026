@@ -59,3 +59,9 @@ sudo sl
 #Permissions determine how different users can interact with a file or directory.
 #It is used to examine the detailed properties of a specific file.
 ls -l hello.sh
+#Level 9: Change file permissions
+#The chmod command is used to change the permissions of a file or directory. Only the root user or the file owner can change file permissions.
+#You are modifying the permissions of that file to make it an executable program for your own user.
+chmod u+x hello.sh
+#It is the instruction you give to the terminal to start (run) the script you have created
+./hello.sh 
