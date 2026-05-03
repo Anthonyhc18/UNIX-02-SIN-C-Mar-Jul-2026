@@ -85,3 +85,13 @@ tail alpha.txt
 head -n 5 alpha.txt
 #The terminal will show you exactly the last 5 lines of the file.
 tail -n 5 alpha.txt
+#Level 11.1: Copy files
+#Creating copies of files can be useful for many reasons:
+#If a copy of a file is created before changes are made, you can always revert to the original file.
+#A copy of a file can be used to transfer it to a removable device.
+#A copy of a document can be used as a template for a new document.
+#You are performing one of the most common and critical operations in system administration: copying a system configuration file to your current directory.
+cp /etc/passwd .
+#This command is fundamental to your systems and cybersecurity training, as it allows you to audit file permissions and ownership.
+ls -l passwd
+#Final script
