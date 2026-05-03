@@ -21,3 +21,6 @@ ls -rl
 aptitude -v moo
 #After several attempts at negation (at the -vv and -vvv levels), the program finally "gives up" and displays a cow in ASCII art.
 aptitude -vvv moo
+#Level 4:Print the working directory
+#The pwd command prints the working directory.
+pwd
