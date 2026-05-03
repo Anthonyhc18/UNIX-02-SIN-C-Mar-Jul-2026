@@ -55,4 +55,7 @@ ls -r /var/log
 su  -
 #It attempts to run a program called "Steam Locomotive" with superuser privileges
 sudo sl 
-
+#Level 8: Permissions
+#Permissions determine how different users can interact with a file or directory.
+#It is used to examine the detailed properties of a specific file.
+ls -l hello.sh
