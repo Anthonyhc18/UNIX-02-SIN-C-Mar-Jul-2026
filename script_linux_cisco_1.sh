@@ -65,3 +65,9 @@ ls -l hello.sh
 chmod u+x hello.sh
 #It is the instruction you give to the terminal to start (run) the script you have created
 ./hello.sh 
+#Level 10: Change the owner of a file
+#Changing the file owner requires administrative access. A regular user cannot use this command to change the owner of a file, or even to transfer ownership of one of their own files to another user.
+#You are performing one of the most critical actions in file management in Linux: changing file ownership
+sudo chown root hello.sh
+#You are instructing the system to run the script with the maximum privileges of the superuser (root).
+sudo ./hello.sh   
