@@ -8,3 +8,16 @@ ls
 Ls script_linux_cisco_1.sh
 #It's an "Easter Egg" or hidden joke within the aptitude package manager. Its sole function is to engage in a humorous dialogue with the user that culminates in an ASCII art drawing of a cow.
 aptitude moo
+#Level 3: Options
+#Options can be used to modify the behavior of a command
+#It is used to list files and directories in long format, showing technical details that the simple version of the command hides.
+ls -l
+#It is used to list files and directories in reverse order.
+ls -r
+#Both commands are essentially the same. In Linux, command parameters can be written separately or combined into a single string after the hyphen.
+ls -l -r
+ls -rl
+#It is a programmed response designed to play with the user who believes that by adding arguments they will find something hidden.
+aptitude -v moo
+#After several attempts at negation (at the -vv and -vvv levels), the program finally "gives up" and displays a cow in ASCII art.
+aptitude -vvv moo
