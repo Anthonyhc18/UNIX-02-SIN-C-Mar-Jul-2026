@@ -38,3 +38,14 @@ cd School/Art
 cd ..
 #It's the fastest shortcut in Linux to return to your home directory (also known as Home).
 cd ~
+#Level 6: File listings
+#You are asking for a detailed listing of one of the most important folders in Linux: the directory where the system stores its logs.
+ls -l /var/log/
+#Performs an advanced, chronological search within the system logs folder.
+ls -lt /var/log   
+#It is requesting the system for a detailed list of the log files, but with a specific organization based on their weight or size.
+ls -l -S /var/log 
+#It organizes log files by size, but this time displays them in ascending order: from smallest to largest.
+ls -lSr /var/log
+#It is requesting a list of the directory of records, but with the alphabetical order reversed.
+ls -r /var/log  
