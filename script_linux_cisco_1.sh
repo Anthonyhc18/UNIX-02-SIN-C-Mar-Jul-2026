@@ -71,3 +71,17 @@ chmod u+x hello.sh
 sudo chown root hello.sh
 #You are instructing the system to run the script with the maximum privileges of the superuser (root).
 sudo ./hello.sh   
+#Level 11: Viewing files
+#There are several commands in Linux available for viewing the contents of files. The `cat` command, which stands for "concatenate," is often used to quickly view the contents of small files.
+#You are asking the terminal to concatenate and display the entire contents of that file directly on the screen
+cat animals.txt
+#It is used to quickly and directly display the contents of a text file in the terminal.
+cat alpha.txt
+#The terminal will only show you the first 10 lines of the file we just created.
+head alpha.txt
+#The terminal will do the opposite of head: it will show you the last 10 lines of the file.
+tail alpha.txt
+#You are limiting the output to only show the first 5 lines of the file.
+head -n 5 alpha.txt
+#The terminal will show you exactly the last 5 lines of the file.
+tail -n 5 alpha.txt
