@@ -53,3 +53,6 @@ ls -r /var/log
 #Preventing ordinary users from running these commands helps protect the system.
 #`sudo` is one of the most powerful commands in Linux system administration. Its main function is to allow you to switch users, usually to become the superuser or root.
 su  -
+#It attempts to run a program called "Steam Locomotive" with superuser privileges
+sudo sl 
+
