@@ -49,3 +49,7 @@ ls -l -S /var/log
 ls -lSr /var/log
 #It is requesting a list of the directory of records, but with the alphabetical order reversed.
 ls -r /var/log  
+#Level 7: Administrative access
+#Preventing ordinary users from running these commands helps protect the system.
+#`sudo` is one of the most powerful commands in Linux system administration. Its main function is to allow you to switch users, usually to become the superuser or root.
+su  -
