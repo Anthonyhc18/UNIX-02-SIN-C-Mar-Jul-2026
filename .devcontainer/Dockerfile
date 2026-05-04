@@ -227,9 +227,9 @@ __set_prompt() {
     if [ $ec -eq 0 ]; then
         mark='\[\e[32m\]✓\[\e[0m\]'
     else
-        mark="\[\e[31m\]✗ $ec\[\e[0m\]"
+        mark="\[\e[31m\](Cojudo💀) $ec\[\e[0m\]"
     fi
-    PS1="\[\e[36m\][Analista-UIDE]\[\e[0m\] \[\e[33m\]\W\[\e[0m\] $mark \$ "
+    PS1="\[\e[36m\][Anthony-Herrera]\[\e[0m\] \[\e[33m\]\W\[\e[0m\] $mark \$ "
 }
 PROMPT_COMMAND=__set_prompt
 EOF
