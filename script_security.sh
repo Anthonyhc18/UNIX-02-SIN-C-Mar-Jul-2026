@@ -96,3 +96,8 @@ SUB_GID_MAX             600100000
 diseno:x:1001:
 marketing:x:2100:
 cache_web:x:102:
+
+[Anthony-Herrera-UIDE] ~ 💀COJUDO💀 # usermod -aG desarrolladores root With this command, you've just performed a strategic self-promotion. Although as root you already have absolute power, technically you're now also an official member of the "development team".
+
+[Anthony-Herrera-UIDE] ~ 💀COJUDO💀 # usermod -aG diseno root This is used to modify an existing user (in this case, the root superuser) to give them a new "identity" or group membership. The key is the combination of the -a (for append) and -G (for groups) flags, which together allow you to add the user to a new subgroup called design without removing them from the groups they already belonged to (such as developers or operations).
+                                                          
