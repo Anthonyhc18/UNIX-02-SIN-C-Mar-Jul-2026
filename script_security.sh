@@ -55,3 +55,10 @@ news:x:9:
 
 [Anthony-Herrera-UIDE] ~ MUYBIEN✓ # groups $USER By running groups $USER, I am performing a specific query to see exactly which privileges are attached to my current session identity. In Linux, $USER is an environment variable that automatically holds the name of the user I am currently logged in as. By passing it to the groups command, I’m asking the system: "Show me every single access level granted to me right now."
 root
+
+[Anthony-Herrera-UIDE] ~ 💀COJUDO💀 # id -u By running id -u, I am stripping away all the fluff and asking the system for the one thing that truly matters to the Linux kernel: my numerical User ID.
+0
+[Anthony-Herrera-UIDE] ~ 💀COJUDO💀 # id -g group ID principal 
+0
+[Anthony-Herrera-UIDE] ~ MUYBIEN✓ # id -G By running id -G, I am asking the system to show me the complete list of all Group IDs (both primary and secondary) that I belong to, but in their raw numerical form.
+0
