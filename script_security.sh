@@ -52,3 +52,6 @@ disk:x:6:
 lp:x:7:
 mail:x:8:
 news:x:9:
+
+[Anthony-Herrera-UIDE] ~ MUYBIEN✓ # groups $USER By running groups $USER, I am performing a specific query to see exactly which privileges are attached to my current session identity. In Linux, $USER is an environment variable that automatically holds the name of the user I am currently logged in as. By passing it to the groups command, I’m asking the system: "Show me every single access level granted to me right now."
+root
