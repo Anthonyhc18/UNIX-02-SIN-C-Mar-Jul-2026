@@ -40,3 +40,15 @@ drwxrwxrwx+ 7 root root  4096 may  8 14:38 .git
 -rw-rw-rw-  1 root root    53 may  8 14:36 README.md
 -rw-rw-rw-  1 root root  1207 may  8 14:40 script_security.sh
 -rw-rw-rw-  1 root root     0 may  8 14:40 test.txt
+
+[Anthony-Herrera-UIDE] ~ MUYBIEN✓ # cat /etc/group | head -10 By running cat /etc/group | head -10, I’m looking at the counterpart to the /etc/passwd file. While /etc/passwd tells me who the users are, this file defines the Groups (the "clubs") that exist in the system. Using head -10 allows me to focus on the first ten entries, which are usually the most important system-defined groups.
+root:x:0:
+daemon:x:1:
+bin:x:2:
+sys:x:3:
+adm:x:4:
+tty:x:5:
+disk:x:6:
+lp:x:7:
+mail:x:8:
+news:x:9:
