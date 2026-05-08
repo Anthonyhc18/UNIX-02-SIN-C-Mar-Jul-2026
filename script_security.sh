@@ -26,3 +26,17 @@ nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
 systemd-network:x:997:997:systemd Network Management:/:/usr/sbin/nologin
 debian-tor:x:100:101::/var/lib/tor:/bin/false
 tcpdump:x:996:996:tcpdump:/nonexistent:/usr/sbin/nologin
+
+[Anthony-Herrera-UIDE] ~ MUYBIEN✓ # touch test.txt Since test.txt didn't exist before, the system did two things: It created a new, empty file named test.txt. It assigned me (root, UID 0) as the owner and my primary group (root, GID 0) as the group owner
+
+[Anthony-Herrera-UIDE] ~ MUYBIEN✓ # ls -la When I run ls -la, I am asking the system for the "Full Disclosure" of the current directory. This is where I can truly see the results of my previous actions—like the touch test.txt command—and verify the security structure of my environment.
+total 68
+drwxrwxrwx+ 4 root root  4096 may  8 14:40 .
+drwxr-xrwx+ 4 root root  4096 may  8 14:36 ..
+drwxrwxrwx+ 2 root root  4096 may  8 14:36 .devcontainer
+drwxrwxrwx+ 7 root root  4096 may  8 14:38 .git
+-rw-rw-rw-  1 root root  4688 may  8 14:36 .gitignore
+-rw-rw-rw-  1 root root 34523 may  8 14:36 LICENSE
+-rw-rw-rw-  1 root root    53 may  8 14:36 README.md
+-rw-rw-rw-  1 root root  1207 may  8 14:40 script_security.sh
+-rw-rw-rw-  1 root root     0 may  8 14:40 test.txt
