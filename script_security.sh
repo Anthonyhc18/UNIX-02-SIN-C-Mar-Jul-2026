@@ -62,3 +62,20 @@ root
 0
 [Anthony-Herrera-UIDE] ~ MUYBIEN✓ # id -G By running id -G, I am asking the system to show me the complete list of all Group IDs (both primary and secondary) that I belong to, but in their raw numerical form.
 0
+
+[Anthony-Herrera-UIDE] ~ MUYBIEN✓ # mkdir ~/proyecto_unix/ By running mkdir ~/proyecto_unix/, I have officially moved from inspecting the system to building my own workspace.
+                                                                                                                                                                                
+[Anthony-Herrera-UIDE] ~ MUYBIEN✓ # ls -la ~/proyecto_unix/ By running ls -la ~/proyecto_unix/, I am taking a look inside my newly created folder to verify its contents and hidden properties. Even though I just created the folder and haven't put any files in it yet, the output tells a very interesting story about how Linux manages directories.
+total 8
+drwxr-xr-x 2 root root 4096 may  8 15:06 .
+drwx------ 1 root root 4096 may  8 15:06 ..
+                                                                                                                                                                                
+[Anthony-Herrera-UIDE] ~ MUYBIEN✓ # groupadd desarrolladores By running groupadd desarrolladores, I am taking the first step toward access management. Instead of just operating as a solo user, I am creating a structured environment where multiple people could eventually work together.
+                                                                                                                                                                                
+[Anthony-Herrera-UIDE] ~ MUYBIEN✓ # groupadd -g 2000 operaciones By running groupadd -g 2000 operaciones, I am demonstrating advanced control over the system's group management. Instead of letting Linux pick a random number, I am manually assigning a specific GID.
+
+[Anthony-Herrera-UIDE] ~ 💀COJUDO💀 # groupadd --system servicios_web By running groupadd --system servicios_web, I am making a clear distinction between human roles and system processes. This isn't just a group for people; it’s a "backstage" group for the services that keep my project running.
+
+[Anthony-Herrera-UIDE] ~ 💀COJUDO💀 # grep -E "desarroladores|operaiones|servicios_web" /etc/group Instead of reading the entire /etc/group file (which may have 50 or 100 boring lines), we use this command to extract only the information we are interested in at once.
+servicios_web:x:995:
+                                       
