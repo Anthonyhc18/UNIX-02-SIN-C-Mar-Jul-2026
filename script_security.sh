@@ -78,4 +78,9 @@ drwx------ 1 root root 4096 may  8 15:06 ..
 
 [Anthony-Herrera-UIDE] ~ 💀COJUDO💀 # grep -E "desarroladores|operaiones|servicios_web" /etc/group Instead of reading the entire /etc/group file (which may have 50 or 100 boring lines), we use this command to extract only the information we are interested in at once.
 servicios_web:x:995:
-                                       
+
+[Anthony-Herrera-UIDE] ~ MUYBIEN✓ # grep -E "GIG_MIN|GID_MAX|SYS_GID" /etc/login.defs While `/etc/group` shows us the groups that already exist, the `/etc/login.defs` file dictates the rules for future groups. Looking up these variables is like consulting the instruction manual the system uses to assign numbers to new groups.
+GID_MAX                 60000
+#SYS_GID_MIN              101
+#SYS_GID_MAX              999
+SUB_GID_MAX             600100000                
