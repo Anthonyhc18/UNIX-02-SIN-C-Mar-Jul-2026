@@ -83,4 +83,16 @@ servicios_web:x:995:
 GID_MAX                 60000
 #SYS_GID_MIN              101
 #SYS_GID_MAX              999
-SUB_GID_MAX             600100000                
+SUB_GID_MAX             600100000              
+
+#Create groups with addgroup
+[Anthony-Herrera-UIDE] ~ 💀COJUDO💀 # addgroup diseno
+                                                                                                                                                                                
+[Anthony-Herrera-UIDE] ~ MUYBIEN✓ # addgroup --gid 2100 marketing
+                                                                                                                                                                                
+[Anthony-Herrera-UIDE] ~ MUYBIEN✓ # addgroup --system cache_web
+                                                                                                                                                                                
+[Anthony-Herrera-UIDE] ~ MUYBIEN✓ # grep -E "diseno|marketing|cache_web" /etc/group
+diseno:x:1001:
+marketing:x:2100:
+cache_web:x:102:
