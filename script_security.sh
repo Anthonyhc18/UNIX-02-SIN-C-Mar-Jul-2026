@@ -165,3 +165,17 @@ total 8
 drwxr-xr-x 2 root root   4096 may 11 14:58 .
 drwxr-xr-x 5 root root   4096 may 11 14:57 ..
 -rw-r--r-- 1 root diseno    0 may 11 14:58 informe.txt
+
+[Anthony-Herrera-UIDE] ~ 💀COJUDO💀 # chgrp -R desarrolladores ~/lab_chgrp/scripts/ recursively changes the entire directory
+                                                                                                                                                                                                                                                                      
+[Anthony-Herrera-UIDE] ~ MUYBIEN✓ # ls -laR ~/lab_chgrp/scripts/
+/root/lab_chgrp/scripts/:
+total 8
+drwxr-xr-x 2 root desarrolladores 4096 may 11 14:58 .
+drwxr-xr-x 5 root root            4096 may 11 14:57 ..
+-rw-r--r-- 1 root desarrolladores    0 may 11 14:58 deploy.sh
+
+[Anthony-Herrera-UIDE] ~ MUYBIEN✓ # chgrp -Rv diseno ~/lab_chgrp/scripts/ I executed a recursive group ownership change on the scripts directory. By using the verbose flag (-v), the system confirmed that the group was successfully updated from 'desarrolladores' to 'diseno' for both the parent directory and the deploy.sh script.                  
+
+cambiado el grupo de '/root/lab_chgrp/scripts/deploy.sh' de desarrolladores a diseno
+cambiado el grupo de '/root/lab_chgrp/scripts/' de desarrolladores a diseno
