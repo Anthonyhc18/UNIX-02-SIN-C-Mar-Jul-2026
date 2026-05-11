@@ -141,3 +141,12 @@ total 8
 drwxr-xr-x 2 root root 4096 may 11 14:58 .
 drwxr-xr-x 5 root root 4096 may 11 14:57 ..
 -rw-r--r-- 1 root root    0 may 11 14:58 informe.txt
+
+[Anthony-Herrera-UIDE] ~ MUYBIEN✓ # chgrp desarrolladores ~/lab_chgrp/proyectos/app.py
+                                                                                                                                                                           
+[Anthony-Herrera-UIDE] ~ MUYBIEN✓ # ls -la ~/lab_chgrp/proyectos/                     
+total 8
+drwxr-xr-x 2 root root            4096 may 11 14:58 .
+drwxr-xr-x 5 root root            4096 may 11 14:57 ..
+-rw-r--r-- 1 root desarrolladores    0 may 11 14:58 app.py
+-rw-r--r-- 1 root root               0 may 11 14:58 config.json
