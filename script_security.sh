@@ -118,3 +118,8 @@ marketing:x:2100:root
                                                                                                                                                                                 
 [Anthony-Herrera-UIDE] ~ MUYBIEN✓ # id root
 uid=0(root) gid=0(root) grupos=0(root),1000(desarrolladores),1001(diseno),2100(marketing),2101(grupo_temporal)
+
+[Anthony-Herrera-UIDE] ~ MUYBIEN✓ # usermod -G desarrolladores root This removes all child groups except developers.
+                                                                                                                                                                                
+[Anthony-Herrera-UIDE] ~ MUYBIEN✓ # id root
+uid=0(root) gid=0(root) grupos=0(root),1000(desarrolladores)
