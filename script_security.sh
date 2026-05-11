@@ -150,3 +150,18 @@ drwxr-xr-x 2 root root            4096 may 11 14:58 .
 drwxr-xr-x 5 root root            4096 may 11 14:57 ..
 -rw-r--r-- 1 root desarrolladores    0 may 11 14:58 app.py
 -rw-r--r-- 1 root root               0 may 11 14:58 config.json
+
+[Anthony-Herrera-UIDE] ~ 💀COJUDO💀 # chgrp diseno ~/lab_chgrp/proyectos/config.json ~/lab_chgrp/reportes/informe.txt This command changes the group ownership of the specified files to the 'diseno' group. It allows users who are members of the 'diseno' group to interact with these files based on the group permissions (read, write, or execute) defined for those files.
+                                                                                                                                                                                                                           
+[Anthony-Herrera-UIDE] ~ MUYBIEN✓ # ls -la ~/lab_chgrp/proyectos/
+total 8
+drwxr-xr-x 2 root root            4096 may 11 14:58 .
+drwxr-xr-x 5 root root            4096 may 11 14:57 ..
+-rw-r--r-- 1 root desarrolladores    0 may 11 14:58 app.py
+-rw-r--r-- 1 root diseno             0 may 11 14:58 config.json
+                                                                                                                                                                                                                           
+[Anthony-Herrera-UIDE] ~ MUYBIEN✓ # ls -la ~/lab_chgrp/reportes/ 
+total 8
+drwxr-xr-x 2 root root   4096 may 11 14:58 .
+drwxr-xr-x 5 root root   4096 may 11 14:57 ..
+-rw-r--r-- 1 root diseno    0 may 11 14:58 informe.txt
