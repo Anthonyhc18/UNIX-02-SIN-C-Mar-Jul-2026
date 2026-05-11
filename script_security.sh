@@ -111,3 +111,10 @@ root:x:0:
 desarrolladores:x:1000:root
 diseno:x:1001:root
 marketing:x:2100:root
+
+[Anthony-Herrera-UIDE] ~ MUYBIEN✓ # groupadd grupo_temporal The command groupadd grupo_temporal creates a new group on your Linux system.
+                                                                                                                                                                                
+[Anthony-Herrera-UIDE] ~ MUYBIEN✓ # usermod -aG grupo_temporal root This command appends the root user to the 'grupo_temporal' group. Using the -a flag ensures that the user stays in all their current groups while gaining membership in the new one.
+                                                                                                                                                                                
+[Anthony-Herrera-UIDE] ~ MUYBIEN✓ # id root
+uid=0(root) gid=0(root) grupos=0(root),1000(desarrolladores),1001(diseno),2100(marketing),2101(grupo_temporal)
