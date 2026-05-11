@@ -100,4 +100,14 @@ cache_web:x:102:
 [Anthony-Herrera-UIDE] ~ 💀COJUDO💀 # usermod -aG desarrolladores root With this command, you've just performed a strategic self-promotion. Although as root you already have absolute power, technically you're now also an official member of the "development team".
 
 [Anthony-Herrera-UIDE] ~ 💀COJUDO💀 # usermod -aG diseno root This is used to modify an existing user (in this case, the root superuser) to give them a new "identity" or group membership. The key is the combination of the -a (for append) and -G (for groups) flags, which together allow you to add the user to a new subgroup called design without removing them from the groups they already belonged to (such as developers or operations).
-                                                          
+
+[Anthony-Herrera-UIDE] ~ MUYBIEN✓ # adduser root marketing This command adds the user 'root' to the 'marketing' group. By doing this, the root user will inherit any file permissions or access rights specifically assigned to the marketing group.
+
+[Anthony-Herrera-UIDE] ~ MUYBIEN✓ # id root When you run the command id root, the system displays the identity information for the root user. This includes the User ID (UID), the primary Group ID (GID), and any supplementary groups the user belongs to.
+uid=0(root) gid=0(root) grupos=0(root),1000(desarrolladores),1001(diseno),2100(marketing)
+
+[Anthony-Herrera-UIDE] ~ MUYBIEN✓ # grep root /etc/group Running grep root /etc/group searches the /etc/group file for any line containing the word "root". This file is the system's database for defining which users belong to which groups.
+root:x:0:
+desarrolladores:x:1000:root
+diseno:x:1001:root
+marketing:x:2100:root
