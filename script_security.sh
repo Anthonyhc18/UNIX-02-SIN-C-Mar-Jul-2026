@@ -123,3 +123,8 @@ uid=0(root) gid=0(root) grupos=0(root),1000(desarrolladores),1001(diseno),2100(m
                                                                                                                                                                                 
 [Anthony-Herrera-UIDE] ~ MUYBIEN✓ # id root
 uid=0(root) gid=0(root) grupos=0(root),1000(desarrolladores)
+
+[Anthony-Herrera-UIDE] ~ MUYBIEN✓ # usermod -aG diseno,marketing,grupo_temporal root This command adds the root user to multiple groups simultaneously (diseno, marketing, and grupo_temporal). By using the -aG flags, you are ensuring that root's existing group memberships are preserved while adding these three new ones.
+                                                                                                                                                                                
+[Anthony-Herrera-UIDE] ~ MUYBIEN✓ # id root
+uid=0(root) gid=0(root) grupos=0(root),1000(desarrolladores),1001(diseno),2100(marketing),2101(grupo_temporal)
