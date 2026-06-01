@@ -390,3 +390,24 @@ Password:
 New password: 
 Retype new password: 
 passwd: password updated successfully
+
+@Anthonyhc18 ➜ ~/Documents $ cat ~/Documents/food.txt #The command cat ~/Documents/food.txt is used to display the entire content of a file on your screen.
+Food is good.
+@Anthonyhc18 ➜ ~/Documents $ cat food.txt > newfile1.txt #The command `cat food.txt > newfile1.txt` reads the contents of `food.txt` and writes them to `newfile1.txt`, creating the file if it doesn't exist or replacing its contents if it already exists. Essentially, it works like a "copy and paste" operation, copying text from one file to another, but sending the output to the new file instead of displaying it on the screen.
+
+@Anthonyhc18 ➜ ~/Documents $ cat newfile1.txt  #The cat utility (short for concatenate) reads the entire file from start to finish and outputs the text line-by-line to your screen. If the file exists, you will see its content (e.g., "Food is good."); if the file does not exist, the terminal will return an error message stating "No such file or directory."
+Food is good.
+
+@Anthonyhc18 ➜ ~/Documents $ echo "Hello" # When you run echo "Hello", the shell simply takes the string "Hello" and prints it back to your terminal output. It is primarily used in scripts to show status messages, debug code, or output data.
+Hello
+#This command will overwrite the content of newfile1.txt with the text "I like food."
+@Anthonyhc18 ➜ ~/Documents $ cat newfile1.txt
+Food is good.
+@Anthonyhc18 ➜ ~/Documents $ echo "I like food." > newfile1.txt
+@Anthonyhc18 ➜ ~/Documents $ cat newfile1.txt
+I like food.
+
+@Anthonyhc18 ➜ ~/Documents $ echo "This food is good." >> newfile1.txt #Notice that the STDOUT output of the echo command has replaced the original file contents. This is because the > character overwrites any existing file contents. To append content to a file, instead of overwriting, use the greater-than symbol twice.
+@Anthonyhc18 ➜ ~/Documents $  cat newfile1.txt
+I like food.
+This food is good.
