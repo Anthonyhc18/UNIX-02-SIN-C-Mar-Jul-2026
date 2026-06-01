@@ -57,3 +57,124 @@ codespace:x:1000:1000::/home/codespace:/bin/bash
 sshd:x:101:65534::/run/sshd:/usr/sbin/nologin
 @Anthonyhc18 ➜ ~/Documents $ 
 
+@Anthonyhc18 ➜ ~/Documents $ grep codespace passwd #The command grep codespace passwd successfully matched the user 'codespace' within the passwd file, outputting the corresponding user entry. This confirms that the user is registered in the system's account database.
+codespace:x:1000:1000::/home/codespace:/bin/bash
+
+@Anthonyhc18 ➜ ~/Documents $ grep 'root' passwd #"The command grep 'root' passwd searches for the 'root' pattern within the file. Since the root account is the system administrator, the command successfully returns its entry from the database.
+root:x:0:0:root:/root:/bin/bash
+
+@Anthonyhc18 ➜ ~/Documents $ grep '^root' /etc/passwd #The grep '^root' /etc/passwd command specifically searches for lines that begin with the string 'root'. The ^ character acts as an anchor for the start of the line, ensuring that only the entry where 'root' is the username is returned.
+root:x:0:0:root:/root:/bin/bash
+
+
+@Anthonyhc18 ➜ ~/Documents $ cat alpha-first.txt #The cat command reads the entire contents of the specified file and outputs it to the standard output (the terminal screen). This is the standard way to inspect the contents of a text file in Linux.
+A is for Animal
+B is for Bear
+C is for Cat
+D is for Dog
+E is for Elephant
+F is for Flower
+
+@Anthonyhc18 ➜ ~/Documents $ grep 'r$' alpha-first.txt #The grep 'r$' command filters the file for lines ending with the letter 'r'. The $ symbol acts as an anchor for the end of the line, ensuring that only lines where 'r' is the final character are returned.
+B is for Bear
+F is for Flower
+
+@Anthonyhc18 ➜ ~/Documents $ cat red.txt # The cat command outputs the complete contents of red.txt to the terminal, confirming the successful creation of the file with the expected lines.
+Red
+Reef
+Rot
+Reeed
+Rd
+Rod
+Roof
+Reed
+Root
+reel
+
+@Anthonyhc18 ➜ ~/Documents $ grep -i 'r..f' red.txt #The grep -i 'r..f' command performs a case-insensitive search for a four-character pattern starting with 'r' and ending with 'f', where the middle two characters can be anything. The . acts as a wildcard for any single character.
+Reef
+Roof
+@Anthonyhc18 ➜ ~/Documents $ grep 'r..d' red.txt #The grep 'r..d' command filters for four-letter words starting with 'r' and ending with 'd'. The two dots (..) are placeholders for any two characters. Adding the -i flag is necessary to include words starting with an uppercase 'R' (like 'Reed').
+read
+
+@Anthonyhc18 ➜ ~/Documents $ grep '....' red.txt #The grep '....' command filters the file to return only lines containing at least four consecutive characters. The . acts as a wildcard for any single character, so four dots require a minimum match of four characters in a sequence.
+Reef
+Reeed
+Roof
+Reed
+Root
+reel
+read
+
+@Anthonyhc18 ➜ ~/Documents $ grep 'r..t' /etc/passwd #The grep 'r..t' /etc/passwd command searches for any string that starts with 'r', has exactly two characters in between, and ends with 't'. This is a common way to locate entries where the username or shell path fits this specific 4-character structure.
+root:x:0:0:root:/root:/bin/bash
+@Anthonyhc18 ➜ ~/Documents $ cat profile.txt #The cat command displays the file's content, which serves as a dataset for pattern matching exercises. Using grep with character classes like [0-9] allows you to isolate numerical data from text, a fundamental skill in log analysis and system administration.
+Hello my name is Joe.
+I am 37 years old.
+3121991
+My favorite food is avocados.
+I have 2 dogs.
+123456789101112
+@Anthonyhc18 ➜ ~/Documents $ grep '[0-9]' profile.txt #The grep '[0-9]' command uses a character class to match any line containing at least one numerical digit. It scans the file and returns every line where a digit between 0 and 9 is present.
+I am 37 years old.
+3121991
+I have 2 dogs.
+123456789101112
+@Anthonyhc18 ➜ ~/Documents $ grep '[^0-9]' profile.txt #The grep '[^0-9]' command uses the caret ^ inside square brackets as a negation operator. It instructs grep to match any line that contains at least one character that is not a digit (0-9).
+Hello my name is Joe.
+I am 37 years old.
+My favorite food is avocados.
+I have 2 dogs.
+@Anthonyhc18 ➜ ~/Documents $ grep '[.]' profile.txt #In regex, the dot . is a wildcard, but placing it inside square brackets [.] escapes it, forcing grep to treat it as a literal character. This is the standard way to find punctuation marks like periods within a text file.
+Hello my name is Joe.
+I am 37 years old.
+My favorite food is avocados.
+I have 2 dogs
+@Anthonyhc18 ➜ ~/Documents $ cat red.txt
+Red
+Reef
+Rot
+Reeed
+Rd
+Rod
+Roof
+Reed
+Root
+reel
+
+@Anthonyhc18 ➜ ~/Documents $ grep -i 're*d' red.txt #The command grep -i 're*d' red.txt searches the file for any word that starts with "r" and ends with "d," allowing for any number of "e" characters in between. The -i flag is essential because it makes the search case-insensitive, ensuring you find both "Red" and "rd" or "reed," regardless of whether they are capitalized.
+Red
+Reeed
+Rd
+Reed
+@Anthonyhc18 ➜ ~/Documents $ grep 'z*' red.txt #The pattern z* matches 'zero or more' occurrences of the letter 'z'. Since 'zero' occurrences of 'z' exist between every character in a string, grep matches every line in the file. Essentially, z* is a null-match that returns all input.
+Red
+Reef
+Rot
+Reeed
+Rd
+Rod
+Roof
+Reed
+Root
+reel
+read
+@Anthonyhc18 ➜ ~/Documents $ grep 'e*' red.txt #The pattern e* matches 'zero or more' occurrences of 'e'. Because every string contains 'zero' 'e's, the regex engine considers every line a match. This is why grep returns the entire file content, regardless of whether the line actually contains the letter 'e'.
+Red
+Reef
+Rot
+Reeed
+Rd
+Rod
+Roof
+Reed
+Root
+reel
+read
+@Anthonyhc18 ➜ ~/Documents $ grep 'ee*' red.txt #The pattern ee* forces the regex engine to find at least one literal 'e' before the quantifier applies. This effectively changes the logic from 'zero or more' (which matches everything) to 'one or more', allowing you to successfully filter out lines that don't contain the character 'e'.
+Red
+Reef
+Reeed
+Reed
+reel
+read
