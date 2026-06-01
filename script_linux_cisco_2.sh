@@ -284,3 +284,89 @@ codespa+   27182       0  0 00:31 ?        00:00:00 /bin/sh
 root       27222       0  0 00:31 ?        00:00:00 /bin/sh
 codespa+   40436       7  0 00:52 ?        00:00:00 sleep 1
 codespa+   40444    4338  0 00:52 pts/2    00:00:00 ps -ef
+
+@Anthonyhc18 ➜ ~ $ sudo apt-get update   #The command sudo apt-get update is the first and most important step in managing software on Debian-based Linux systems (like Ubuntu, which is what your GitHub Codespace likely uses).
+Hit:1 http://archive.ubuntu.com/ubuntu noble InRelease
+Hit:2 http://security.ubuntu.com/ubuntu noble-security InRelease               
+Hit:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease  
+
+@Anthonyhc18 ➜ ~ $ apt-cache search cow #The apt-cache search command is a powerful way to look through the package database on your Linux system. When you run apt-cache search cow, you are asking the system to scan the list of available software packages and return anything that contains the word "cow" in its name or description.
+cowbuilder - pbuilder running on cowdancer
+cowdancer - Copy-on-write directory tree utility
+cowpatty - Brute-force WPA dictionary attack
+cowsay - configurable talking cow
+cowsay-off - configurable talking cow (offensive cows)
+dicoweb - RFC 2229 compliant modular dictionary server (web interface)
+erlang-cowboy - Cowboy is a small, fast and modular HTTP server written in Erlang
+erlang-cowboy-doc - Documentation files for erlang-cowboy
+erlang-cowboy-examples - Examples for erlang-cowboy
+erlang-cowlib - Erlang library for manipulating web protocols
+fl-cow - copy-on-write utility
+golang-github-cowsql-go-cowsql-dev - Go bindings for libcowsql
+libb-cow-perl - additional B helpers to check COW status
+libcowsql-dev - Embeddable, replicated and fault tolerant SQL engine - development files
+libcowsql0 - Embeddable, replicated and fault tolerant SQL engine - shared library
+libmoox-struct-perl - simple lightweight record-like structures making sounds like cows
+libnet-opensrs-perl - Perl interface for domain registration via the Tucows OpenSRS HTTPS XML API.
+libqcow-dev - QEMU Copy-On-Write image format access library -- development files
+libqcow-utils - QEMU Copy-On-Write image format access library -- Utilities
+libqcow1t64 - QEMU Copy-On-Write image format access library
+librust-beef-dev - More compact Cow - Rust source code
+librust-clone-file-dev - Clone files and file ranges with little overhead/CoW - Rust source code
+librust-derive-into-owned-dev - Custom derives to help with types containing Cow fields - Rust source code
+librust-maybe-owned-dev - Provides a `MaybeOwned` (and `MaybeOwnedMut`) type similar to std's `Cow` but it implements `From<T>` and `From<&'a T>` and does not require `ToOwned` - Rust source code
+netrek-client-cow - client for netrek online game
+python3-libqcow - QEMU Copy-On-Write image format access library -- Python 3 bindings
+r-cran-cowplot - GNU R streamlined plot theme and plot annotations for 'ggplot2'
+ruby-nakayoshi-fork - solves CoW friendly problem on MRI 2.2 and later
+scowl - Spell-Checker Oriented Word Lists
+xcowsay - Graphical configurable talking cow
+go-cowsql - Pure-Go cowsql client
+
+@Anthonyhc18 ➜ ~ $ sudo apt-get install cowsay #The sudo apt-get install cowsay command tells your system to download and install the "cowsay" program, which generates ASCII art of a cow that "speaks" your chosen text. By using sudo, you grant the system the necessary administrative permissions to install the software correctly. Once the process finishes, you can simply type cowsay "your message" in your terminal to see the character appear. This is a great, simple way to verify that your package manager is working and that you have the correct permissions to add new tools to your environment.
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  libtext-charwidth-perl
+Suggested packages:
+  filters cowsay-off
+The following NEW packages will be installed:
+  cowsay libtext-charwidth-perl
+0 upgraded, 2 newly installed, 0 to remove and 99 not upgraded.
+Need to get 27.9 kB of archives.
+After this operation, 135 kB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://archive.ubuntu.com/ubuntu noble/main amd64 libtext-charwidth-perl amd64 0.04-11build3 [9358 B]
+Get:2 http://archive.ubuntu.com/ubuntu noble/universe amd64 cowsay all 3.03+dfsg2-8 [18.6 kB]
+Fetched 27.9 kB in 0s (468 kB/s)  
+debconf: unable to initialize frontend: Dialog
+debconf: (Dialog frontend requires a screen at least 13 lines tall and 31 columns wide.)
+debconf: falling back to frontend: Readline
+Selecting previously unselected package libtext-charwidth-perl:amd64.
+(Reading database ... 58639 files and directories currently installed.)
+Preparing to unpack .../libtext-charwidth-perl_0.04-11build3_amd64.deb ...
+Unpacking libtext-charwidth-perl:amd64 (0.04-11build3) ...
+Selecting previously unselected package cowsay.
+Preparing to unpack .../cowsay_3.03+dfsg2-8_all.deb ...
+Unpacking cowsay (3.03+dfsg2-8) ...
+Setting up libtext-charwidth-perl:amd64 (0.04-11build3) ...
+Setting up cowsay (3.03+dfsg2-8) ...
+Processing triggers for man-db (2.12.0-4build2) ...
+
+@Anthonyhc18 ➜ /workspaces/UNIX-02-SIN-C-Mar-Jul-2026 (linux_cisco_2) $ /usr/games/cowsay 'NDG Linux Unhatched' #Using the full path /usr/games/cowsay 'NDG Linux Unhatched' tells your computer: "Go directly to the folder /usr/games/, run the file named cowsay, and pass the message 'NDG Linux Unhatched' to it.
+ _____________________
+< NDG Linux Unhatched >
+ ---------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+@Anthonyhc18 ➜ /workspaces/UNIX-02-SIN-C-Mar-Jul-2026 (linux_cisco_2) $ sudo apt-get purge cowsay #The `sudo apt-get purge cowsay` command removes the cowsay program from your system along with all its associated configuration files, ensuring a complete cleanup rather than just uninstalling the package. Using `purge` guarantees that no residual traces of the software remain in your Linux environment, which is useful when you want to completely remove a tool or troubleshoot dependency issues.
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+Package 'cowsay' is not installed, so not removed
+0 upgraded, 0 newly installed, 0 to remove and 23 not upgraded.
