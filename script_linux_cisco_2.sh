@@ -411,3 +411,6 @@ I like food.
 @Anthonyhc18 ➜ ~/Documents $  cat newfile1.txt
 I like food.
 This food is good.
+
+@Anthonyhc18 ➜ ~/Documents $ vi newfile.txt #You have successfully opened newfile.txt in the vi editor. You are currently in command mode, where you can navigate the file using keys like h, j, k, and l, or enter insert mode by pressing i to start typing text. Remember to press Esc to return to command mode whenever you need to perform actions or access ex mode by typing : to save or quit the file.
+@Anthonyhc18 ➜ ~/Documents $ 
