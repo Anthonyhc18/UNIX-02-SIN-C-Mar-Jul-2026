@@ -417,3 +417,6 @@ This food is good.
 
 #How to Advance Further
 We hope you enjoyed this brief introduction to the world of Linux. The content of this course aligns with the Linux knowledge covered by the LPI Linux Essentials exam objectives. But there's much more! Advance your career by gaining more Linux knowledge with a certification.
+
+Linux para Cisco Certified CyberOps Associate
+¡Enhorabuena, ha terminado este breve curso introductorio de Linux! Acaba de aprender muchos conceptos de Linux que le ayudarán a avanzar su carrera en TI. Hemos destacado que Linux está en todas partes. También hemos hecho hincapié en que aprender Linux es beneficioso para una amplia variedad de carreras tecnológicas. Puede continuar sus estudios de TI en una variedad de áreas, incluyendo redes, IoT y en una de las especialidades de TI con más demanda actualmente, la ciberseguridad.
