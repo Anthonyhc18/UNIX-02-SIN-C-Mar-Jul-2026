@@ -221,3 +221,66 @@ PING 192.168.1.3 (192.168.1.3) 56(84) bytes of data.
 
 --- 192.168.1.3 ping statistics ---
 4 packets transmitted, 0 received, 100% packet loss, time 3080ms 
+
+@Anthonyhc18 ➜ ~ $ ps #The ps command (short for Process Status) is a fundamental tool in Linux used to display information about the processes currently running on your system. Think of it as a "Task Manager" inside your terminal.
+    PID TTY          TIME CMD
+   4338 pts/2    00:00:00 bash
+  39904 pts/2    00:00:00 ps
+
+@Anthonyhc18 ➜ ~ $ ps -e #The -e flag stands for "every". When you run ps -e, it lists every single process currently running on the system, regardless of which user started them or whether they are connected to a terminal (like your current shell).
+    PID TTY          TIME CMD
+      1 ?        00:00:00 docker-init
+      7 ?        00:00:00 sh
+    136 ?        00:00:00 sshd
+    264 ?        00:00:00 dockerd
+    576 ?        00:00:01 containerd
+   1383 ?        00:00:00 sh
+   1419 ?        00:00:00 sh
+   2216 ?        00:00:00 sh
+   2253 ?        00:00:17 node
+   3400 ?        00:00:06 node
+   4010 ?        00:00:00 sh
+   4046 ?        00:00:00 sh
+   4338 pts/2    00:00:00 bash
+   5269 ?        00:00:00 sh
+   5297 ?        00:00:00 sh
+   5555 ?        00:00:00 node
+   5729 ?        00:00:00 sh
+   5762 ?        00:00:00 sh
+  26684 ?        00:00:00 sh
+  26717 ?        00:00:00 sh
+  26993 ?        00:00:00 node
+  27006 ?        00:00:31 node
+  27182 ?        00:00:00 sh
+  27222 ?        00:00:00 sh
+  40191 ?        00:00:00 sleep
+  40193 pts/2    00:00:00 ps
+
+@Anthonyhc18 ➜ ~ $ ps -ef #The command ps -ef is one of the most common and useful variations of the ps command. Think of it as a "Full Details" view of everything currently running on your system.
+UID          PID    PPID  C STIME TTY          TIME CMD
+codespa+       1       0  0 May31 ?        00:00:00 /sbin/docker-init -- /bin/sh -c echo Container started trap "exit 0" 15
+codespa+       7       1  0 May31 ?        00:00:00 /bin/sh -c echo Container started trap "exit 0" 15 /usr/local/share/ssh
+root         136       1  0 May31 ?        00:00:00 sshd: /usr/sbin/sshd [listener] 0 of 10-100 startups
+root         264       1  0 May31 ?        00:00:00 dockerd --dns 168.63.129.16
+root         576     264  0 May31 ?        00:00:01 containerd --config /var/run/docker/containerd/containerd.toml
+codespa+    1383       0  0 May31 ?        00:00:00 /bin/sh
+root        1419       0  0 May31 ?        00:00:00 /bin/sh
+codespa+    2216       0  0 May31 ?        00:00:00 sh /home/codespace/.vscode-remote/bin/8761a5560cfd65fdd19ce7e2bd18dab5c
+codespa+    2253    2216  0 May31 ?        00:00:17 /vscode/bin/linux-x64/8761a5560cfd65fdd19ce7e2bd18dab5c0a4d84e/node /vs
+codespa+    3400    2253  0 May31 ?        00:00:06 /vscode/bin/linux-x64/8761a5560cfd65fdd19ce7e2bd18dab5c0a4d84e/node /vs
+codespa+    4010       0  0 May31 ?        00:00:00 /bin/sh
+root        4046       0  0 May31 ?        00:00:00 /bin/sh
+codespa+    4338    3400  0 May31 pts/2    00:00:00 /bin/bash --init-file /vscode/bin/linux-x64/8761a5560cfd65fdd19ce7e2bd1
+codespa+    5269       0  0 May31 ?        00:00:00 /bin/sh
+root        5297       0  0 May31 ?        00:00:00 /bin/sh
+codespa+    5555    2253  0 May31 ?        00:00:00 /vscode/bin/linux-x64/8761a5560cfd65fdd19ce7e2bd18dab5c0a4d84e/node /vs
+codespa+    5729       0  0 May31 ?        00:00:00 /bin/sh
+root        5762       0  0 May31 ?        00:00:00 /bin/sh
+codespa+   26684       0  0 00:31 ?        00:00:00 /bin/sh
+root       26717       0  0 00:31 ?        00:00:00 /bin/sh
+codespa+   26993    2253  0 00:31 ?        00:00:00 /vscode/bin/linux-x64/8761a5560cfd65fdd19ce7e2bd18dab5c0a4d84e/node /vs
+codespa+   27006    2253  2 00:31 ?        00:00:32 /vscode/bin/linux-x64/8761a5560cfd65fdd19ce7e2bd18dab5c0a4d84e/node --d
+codespa+   27182       0  0 00:31 ?        00:00:00 /bin/sh
+root       27222       0  0 00:31 ?        00:00:00 /bin/sh
+codespa+   40436       7  0 00:52 ?        00:00:00 sleep 1
+codespa+   40444    4338  0 00:52 pts/2    00:00:00 ps -ef
