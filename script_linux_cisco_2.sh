@@ -182,3 +182,42 @@ read
 @Anthonyhc18 ➜ ~ $ su - #When you run the su - command, the system initiates a full login process for the target user, which in this case defaults to the root user.
 Password: 
 root ➜ /workspaces/UNIX-02-SIN-C-Mar-Jul-2026 $ 
+
+root ➜ /workspaces/UNIX-02-SIN-C-Mar-Jul-2026 $ ifconfig  #The ifconfig command is used to display or configure network interfaces on your Linux system
+docker0: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        inet 172.17.0.1  netmask 255.255.0.0  broadcast 172.17.255.255
+        ether 02:42:37:d4:38:d6  txqueuelen 0  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.0.0.153  netmask 255.255.0.0  broadcast 10.0.255.255
+        inet6 fe80::7e1e:52ff:feee:622b  prefixlen 64  scopeid 0x20<link>
+        ether 7c:1e:52:ee:62:2b  txqueuelen 1000  (Ethernet)
+        RX packets 5830718  bytes 8260009979 (8.2 GB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 306556  bytes 166971326 (166.9 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 60439  bytes 129487090 (129.4 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 60439  bytes 129487090 (129.4 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+root ➜ /workspaces/UNIX-02-SIN-C-Mar-Jul-2026 $ ping -c 4 192.168.1.2 #The command ping -c 4 192.168.1.2 is a standard network diagnostic tool.
+PING 192.168.1.2 (192.168.1.2) 56(84) bytes of data.
+
+--- 192.168.1.2 ping statistics ---
+4 packets transmitted, 0 received, 100% packet loss, time 3101ms
+
+root ➜ /workspaces/UNIX-02-SIN-C-Mar-Jul-2026 $  ping -c 4 192.168.1.3 #The command ping -c 4 192.168.1.3 is like sending four digital letters to a specific address to see if anyone is there to answer. The -c 4 tells your system to send exactly four packets and then stop. If it stays "frozen," it means those letters aren't reaching their destination—either the address doesn't exist, or there is a wall (like a firewall) blocking the path.
+PING 192.168.1.3 (192.168.1.3) 56(84) bytes of data.
+
+--- 192.168.1.3 ping statistics ---
+4 packets transmitted, 0 received, 100% packet loss, time 3080ms 
