@@ -113,7 +113,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     tree \
     jq \
     \
-    # === Páginas de manual (comando `man`) ===
+    # === Páginas de manual (comando man) ===
     # La imagen base de Kali viene sin documentación para
     # ahorrar espacio. La reinstalamos porque en el curso "man bash" o
     # "man grep" es material de consulta obligada.
@@ -217,8 +217,20 @@ RUN git config --system --add safe.directory '*' \
 # Lanza una shell bash interactiva. Codespaces la sobrescribe con su
 # propia terminal integrada de VS Code, pero es buena práctica dejarla
 # definida para que la imagen sea usable también con Docker puro.
-Run chsh -s /usr/bin/zsh root
-Run cat >> /root/.zshrc <<'EOF'
-PROMPT='%F{magenta}[Anthony-Herrera-UIDE]%f %F{magenta}%1 ~%f %(?.%F{green}MUYBIEN✓.%F{red}💀COJUDO💀)%f %F{magenta}%#%f '
+# Prompt del curso para bash
+RUN cat >> /root/.bashrc <<'EOF'
+
+# ===== Prompt del curso =====
+__set_prompt() {
+    local ec=$?
+    local mark
+    if [ $ec -eq 0 ]; then
+        mark='\[\e[32m\]MUY BIEN✓\[\e[0m\]'
+    else
+        mark="\[\e[31m\]💀COJUDO💀✗ $ec\[\e[0m\]"
+    fi
+    PS1="\[\e[36m\][Anthony-Herrera]\[\e[0m\] \[\e[33m\]\W\[\e[0m\] $mark \$ "
+}
+PROMPT_COMMAND=__set_prompt
 EOF
-CMD ["/usr/bin/zsh"]
+CMD ["/bin/bash"]

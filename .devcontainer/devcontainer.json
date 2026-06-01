@@ -54,7 +54,7 @@
     //                algunas configuraciones de nmap.
     //   NET_RAW   -> permite crear "sockets raw", es decir, fabricar
     //                paquetes de red byte a byte. Lo usan tcpdump,
-    //                `nmap -sS` (SYN scan) y el comando `ping`.
+    //                nmap -sS (SYN scan) y el comando ping.
     //
     // AVISO: Codespaces corre sobre Azure en un entorno multi-inquilino
     // y puede IGNORAR silenciosamente algunas capacidades por seguridad.
@@ -98,7 +98,7 @@
             "settings": {
                 // Cuando abras una terminal nueva, que sea Bash por
                 // defecto (no zsh, no sh).
-                "terminal.integrated.defaultProfile.linux": "zsh",
+                "terminal.integrated.defaultProfile.linux": "bash",
                 // Final de línea estilo UNIX (\n) en vez de Windows
                 // (\r\n). ESTO ES CRÍTICO: los scripts shell FALLAN
                 // silenciosamente si tienen \r\n, con errores tan raros
