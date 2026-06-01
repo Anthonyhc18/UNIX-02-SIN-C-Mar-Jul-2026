@@ -15,3 +15,15 @@ people.csv
 alpha.txt  letters.txt  numbers.txt
 
 @Anthonyhc18 ➜ ~/Documents $ mv animals.txt zoo.txt # the mv command is used to rename a file. By providing an existing filename as the source and a new filename as the destination, the command renames the file within the same directory instead of moving it to a different path.
+
+@Anthonyhc18 ➜ ~/Documents $ rm linux.txt #The rm command is used to remove files or directories. Executing rm linux.txt deletes the specified file from the filesystem. Since Linux does not use a 'Trash' or 'Recycle Bin' for command-line operations, this action is permanent.
+
+@Anthonyhc18 ➜ ~/Documents $ ls linux.txt #The ls linux.txt command is used to verify the existence of a specific file. If the file is present in the current directory, the system lists it; otherwise, it returns an error indicating the file cannot be accessed
+ls: cannot access 'linux.txt': No such file or directory
+#The `rm` command will ignore directories you tell it to delete. To delete a directory, use a recursive option, such as the `-r` or `-R` options. Be careful, as these options are recursive and will delete all files and all subdirectories.
+@Anthonyhc18 ➜ ~/Documents $ rm Work
+rm: cannot remove 'Work': Is a directory
+@Anthonyhc18 ➜ ~/Documents $ rm -r Work
+@Anthonyhc18 ➜ ~/Documents $ 
+@Anthonyhc18 ➜ ~/Documents $ ls Work 
+ls: cannot access 'Work': No such file or directory
