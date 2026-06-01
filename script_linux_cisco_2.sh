@@ -178,3 +178,7 @@ Reeed
 Reed
 reel
 read
+
+@Anthonyhc18 ➜ ~ $ su - #When you run the su - command, the system initiates a full login process for the target user, which in this case defaults to the root user.
+Password: 
+root ➜ /workspaces/UNIX-02-SIN-C-Mar-Jul-2026 $ 
