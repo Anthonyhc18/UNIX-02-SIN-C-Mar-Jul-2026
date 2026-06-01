@@ -370,3 +370,23 @@ Building dependency tree... Done
 Reading state information... Done
 Package 'cowsay' is not installed, so not removed
 0 upgraded, 0 newly installed, 0 to remove and 23 not upgraded.
+
+@Anthonyhc18 ➜ /workspaces/UNIX-02-SIN-C-Mar-Jul-2026 (linux_cisco_2) $ sudo passwd -S sysadmin #If you run sudo passwd -S sysadmin and it still fails or doesn't return the information you expect, it is likely because the user account is either currently locked or the system's security configuration (PAM) is preventing you from auditing the shadow file directly
+sysadmin P 2026-06-01 0 99999 7 -1
+
+@Anthonyhc18 ➜ /workspaces/UNIX-02-SIN-C-Mar-Jul-2026 (linux_cisco_2) $ su root #If you execute sudo su and then attempt commands like passwd and still receive the Authentication token manipulation error, it confirms that the environment restricts modifications to /etc/shadow due to security configurations in the container.
+Password: 
+👋 Welcome to Codespaces! You are on our default image. 
+   - It includes runtimes and tools for Python, Node.js, Docker, and more. See the full list here: https://aka.ms/ghcs-default-image
+   - Want to use a custom image instead? Learn more here: https://aka.ms/configure-codespace
+
+🔍 To explore VS Code to its fullest, search using the Command Palette (Cmd/Ctrl + Shift + P or F1).
+
+📝 Edit away, run your app as usual, and we'll automatically make it available for you to access.
+
+@Anthonyhc18 ➜ /workspaces/UNIX-02-SIN-C-Mar-Jul-2026 $ 
+
+@Anthonyhc18 ➜ /workspaces/UNIX-02-SIN-C-Mar-Jul-2026 $ passwd sysadmin #We changed to a new password.
+New password: 
+Retype new password: 
+passwd: password updated successfully
