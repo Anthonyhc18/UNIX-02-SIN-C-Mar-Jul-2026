@@ -57,27 +57,17 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 # ----------------------------------------------------------------------------
 # SHELL: qué intérprete usar en los siguientes RUN
 # ----------------------------------------------------------------------------
-# Por defecto Docker usa /bin/sh (un shell más limitado y antiguo). Lo
-# cambiamos a bash por si agregamos más instrucciones con sintaxis
-# moderna (arrays, [[ ]], etc.).
+# [NEW ANALYSIS] Explicitly setting the shell to bash ensures that subsequent 
+# commands can utilize advanced shell features like arrays and logical operators (BHB Cap. 1).
 SHELL ["/bin/bash", "-c"]
-
 
 # ----------------------------------------------------------------------------
 # WORKDIR: directorio de trabajo al entrar al contenedor
 # ----------------------------------------------------------------------------
-# Codespaces siempre monta el código del repositorio en
-# /workspaces/<nombre-del-repo>. Establecer /workspaces aquí hace que las
-# terminales se abran cerca de nuestros archivos del curso.
+# [NEW ANALYSIS] Standardizing the working directory simplifies relative 
+# path management for laboratory scripts (BHB Cap. 3).
 WORKDIR /workspaces
 
-# Configuración de Git para el contenedor:
-# - safe.directory *: confía en cualquier repo montado (necesario porque
-#   /workspaces/... tiene un UID distinto al de root dentro del container).
-# - init.defaultBranch main: evita warnings de "master vs main" en git init.
-# - pull.rebase false: merge por defecto al hacer pull (más intuitivo)
-# - git lfs install --system: registra los hooks de LFS globalmente para
-#   que, si un repo los necesita, funcionen sin sorpresas.
 RUN git config --system --add safe.directory '*' \
  && git config --system init.defaultBranch main \
  && git config --system pull.rebase false \
@@ -86,11 +76,11 @@ RUN git config --system --add safe.directory '*' \
 # ----------------------------------------------------------------------------
 # CMD: comando que se ejecuta por defecto al arrancar el contenedor
 # ----------------------------------------------------------------------------
-# Lanza una shell bash interactiva. Codespaces la sobrescribe con su
-# propia terminal integrada de VS Code, pero es buena práctica dejarla
-# definida para que la imagen sea usable también con Docker puro.
-Run chsh -s /usr/bin/zsh root
-Run cat >> /root/.zshrc <<'EOF'
+# [NEW ANALYSIS] ZSH offers superior scripting and autocompletion features. 
+# Here, a heredoc is used to inject custom prompt settings, showing how to 
+# automate environment customization (BHB Cap. 1).
+RUN chsh -s /usr/bin/zsh root
+RUN cat >> /root/.zshrc <<'EOF'
 PROMPT='%F{magenta}[Anthony-Herrera-UIDE]%f %F{magenta}%1 ~%f %(?.%F{green}MUYBIEN✓.%F{red}💀COJUDO💀)%f %F{magenta}%#%f '
 EOF
 CMD ["/usr/bin/zsh"]
