@@ -1,5 +1,5 @@
 #!/bin/bash
-FILE="output.txt" #This makes it easy to reference the filename later in the script without having to retype it. If you ever want to change the filename, you only have to change it here.
+FILE="outpit.txt" #This makes it easy to reference the filename later in the script without having to retype it. If you ever want to change the filename, you only have to change it here.
 touch "${FILE}" #In this case, it ensures that output.txt actually exists before the script moves to the next step
 until [[ -s "${FILE}" ]]; do #This starts an until loop. An until loop keeps running as long as the condition inside it is false
 echo "${FILE} is empty..." # It provides a visual update to the user so they know the script is actively waiting for data.
