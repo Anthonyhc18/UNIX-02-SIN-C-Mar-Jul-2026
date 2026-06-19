@@ -22,3 +22,9 @@ grep "42.236.10.117" log.txt | awk '{print $7}' #The pipe symbol (|) encrypts th
 sed 's/Mozilla/Godzilla/g' log.txt
 sed 's/Mozilla/Godzilla/g' log.txt > newlog.txt
 grep "Godzilla" newlog.txt
+sed 's/ //g' log.txt
+sed '1d' log.txt
+sed '$d' log.txt
+sed '5,7d' log.txt
+sed -n '2,15 p' log.txt
+sed -i '1d' log.txt
